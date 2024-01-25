@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h4 class="">Punto de Afiliación Telecable</h4>
-                <p class="">Nombre Del Comercio</p>
+                <p class="">@ViewBag.NombreComercio</p>
             </div>
         </div>
     </div>
@@ -50,20 +50,17 @@
                                         <input type="text" class="form-control" id="txtCorreo" placeholder="Correo" required>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <label for="validationDefault02">Servicio de interés</label>
                                         <!-- Default Input -->
-                                        <select class="form-control">
-                                            <option>INTERNET</option>
-                                            <option>INTERNET + TELEFÓNIA</option>
-                                            <option>TV + INTERNET</option>
-                                            <option>TV + INTERNET + TELEFÓNIA</option>
+                                        <select class="form-control" id="cboServios">
+                                          
                                         </select>
                                     </div>
                                 </div>
-                                <button class="btn btn-danger mt-3" type="button">Crear</button>
+                                <button class="btn btn-danger mt-3" type="button" onclick="InsertaLead()">Crear</button>
                             </div>
                         </div>
                     </div>
@@ -72,3 +69,4 @@
         </div>
     </div>
 </main>
+<script src="~/Scripts/CreacionLead/Leads.js"></script>

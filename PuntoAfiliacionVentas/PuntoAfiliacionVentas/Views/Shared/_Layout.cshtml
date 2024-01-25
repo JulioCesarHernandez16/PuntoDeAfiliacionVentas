@@ -4,18 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>CORK Admin Template - Helpdesk Landing Page</title>
+    <title>TELECABLE PUNTO AFILIACIÓN</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
     <link href="~/Content/Cork/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Cork/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Cork/plugins/table/datatable/datatables.css">
+
     <!-- END GLOBAL MANDATORY STYLES -->
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="~/Content/Cork/assets/css/pages/helpdesk.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Cork/assets/css/authentication/form-2.css" rel="stylesheet" />
     <link href="~/Content/Cork/assets/css/tables/table-basic.css" rel="stylesheet" />
     <link href="~/Content/Cork/assets/css/structure.css" rel="stylesheet" />
+    <script src="~/Content/Cork/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <link href="~/Content/Cork/plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Cork/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
     <!--  END CUSTOM STYLE FILE  -->
 </head>
 <body class="sidebar-noneoverflow">
@@ -41,28 +46,28 @@
         </div>
     </div>
 
-        <div id="miniFooterWrapper" class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12">
-                        <div class="position-relative">
-                            <div class="arrow text-center">
-                                <p class="">Up</p>
-                            </div>
+    <div id="miniFooterWrapper" class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="position-relative">
+                        <div class="arrow text-center">
+                            <p class="">Up</p>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-5 mx-auto col-lg-6 col-md-6 site-content-inner text-md-left text-center copyright align-self-center">
-                                <p class="mt-md-0 mt-4 mb-0">2020 &copy; <a target="_blank" href="https://designreset.com/cork">Design Reset</a>.</p>
-                            </div>
-                            <div class="col-xl-5 mx-auto col-lg-6 col-md-6 site-content-inner text-md-right text-center align-self-center">
-                                <p class="mb-0">1355 Market Street, Suit 900 San Francisco, CA 94103</p>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 mx-auto col-lg-6 col-md-6 site-content-inner text-md-left text-center copyright align-self-center">
+                            <p class="mt-md-0 mt-4 mb-0">2020 &copy; <a target="_blank" href="https://designreset.com/cork">Design Reset</a>.</p>
+                        </div>
+                        <div class="col-xl-5 mx-auto col-lg-6 col-md-6 site-content-inner text-md-right text-center align-self-center">
+                            <p class="mb-0">1355 Market Street, Suit 900 San Francisco, CA 94103</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+    </div>
+
 
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -73,6 +78,10 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="~/Content/Cork/assets/js/pages/helpdesk.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="~/Content/Cork/assets/js/components/notification/custom-snackbar.js"></script>
+    <script src="~/Content/Cork/plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="~/Content/Cork/plugins/sweetalerts/custom-sweetalert.js"></script>
+    <script src="~/Content/Cork/plugins/table/datatable/datatables.js"></script>
 </body>
 </html>
 

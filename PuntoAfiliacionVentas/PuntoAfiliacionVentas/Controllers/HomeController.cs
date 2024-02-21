@@ -79,7 +79,7 @@ namespace PuntoAfiliacionVentas.Controllers
                 Arr_Insert.Add("USUARIO_ASIGNADO", UsuarioAsignado);
                 Arr_Insert.Add("ESTADO", "1");
                 Arr_Insert.Add("ID_COMERCIO", IDComercio);
-                bool respuesta = MYSQL_C.MYSQLInsert("BILLINGMYSQL_1", "PUNTO_AFILIACION_TICKET", Arr_Insert, "InsertaLead", "");
+                bool respuesta = MYSQL_C.MYSQLInsert("BILLINGMYSQL", "PUNTO_AFILIACION_TICKET", Arr_Insert, "InsertaLead", "");
 
                 if (respuesta)
                 {
@@ -102,7 +102,7 @@ namespace PuntoAfiliacionVentas.Controllers
         {
             string JSON = string.Empty;
 
-            DataTable Paquete = MYSQL_C.MYSQLSelect("BILLINGMYSQL_1", "SELECT DESCRIPCIO FROM PAQUETES_ENC WHERE punto_afiliacion = 1");
+            DataTable Paquete = MYSQL_C.MYSQLSelect("BILLINGMYSQL", "SELECT DESCRIPCIO FROM PAQUETES_ENC WHERE punto_afiliacion = 1");
             JSON = JsonConvert.SerializeObject(Paquete);
 
 

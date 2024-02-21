@@ -31,13 +31,26 @@ namespace PuntoAfiliacionVentas.Controllers.Casos
             return View();
         }
 
-        public string CargaCasosLead()
+        public ActionResult CargaCasosLead()
         {
-            string ID_COMERCIO = "1";
-            string select = "SELECT * FROM PUNTO_AFILIACION_TICKET WHERE ID_COMERCIO = "+ ID_COMERCIO + "";
-            DataTable Lead = MYSQL_C.MYSQLSelect("BILLINGMYSQL_1", select);
-            string Json = JsonConvert.SerializeObject(Lead);
-            return Json;
+            try
+            {
+
+                if (Session["Comercio"] == null)
+                {
+                    return View("~/Views/Login/Login.cshtml");
+                }
+                string ID_COMERCIO = Session["Comercio"].ToString().Trim();
+                string select = "SELECT * FROM PUNTO_AFILIACION_TICKET WHERE ID_COMERCIO = " + ID_COMERCIO + "";
+                DataTable Lead = MYSQL_C.MYSQLSelect("BILLINGMYSQL", select);
+                string Json = JsonConvert.SerializeObject(Lead);
+                return Content(Json);
+            }
+            catch (Exception e)
+            {
+
+                return View("Login/Login");
+            }
         }
     }
 }

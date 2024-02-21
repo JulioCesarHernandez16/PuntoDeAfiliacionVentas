@@ -27,8 +27,8 @@ namespace PuntoAfiliacionVentas.ComponenteSQL.Conexion.MYSQL
                 //string url_conexion = "DRIVER={MySQL ODBC 3.51 Driver};SERVER=192.168.55.60;UID=root;PWD=mysqlM94sk04.;Database=billing;OPTIONS='';"; //Variable de la conexion
                 if (string.IsNullOrEmpty(url_static))
                 {
-                    //string url_conexion = File.ReadLines("//192.168.18.3/telecable/xbase_sql.txt").First(); //Variable de la conexion PRODUCCION
-                    string url_conexion = "DRIVER={MySQL ODBC 8.0 Unicode Driver};SERVER=192.168.18.122;UID=root;PWD=mysqlM94sk04.;Database=billing;OPTIONS='';"; //Variable de la conexion TEST
+                    string url_conexion = File.ReadLines("//192.168.18.3/telecable/xbase_sql.txt").First(); //Variable de la conexion PRODUCCION
+                    //string url_conexion = "DRIVER={MySQL ODBC 8.0 Unicode Driver};SERVER=192.168.18.122;UID=root;PWD=mysqlM94sk04.;Database=billing;OPTIONS='';"; //Variable de la conexion TEST
                     url_static = url_conexion;
                 }
             }

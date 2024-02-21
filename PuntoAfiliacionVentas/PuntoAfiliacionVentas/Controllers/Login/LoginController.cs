@@ -25,6 +25,8 @@ namespace PuntoAfiliacionVentas.Controllers.Login
         /*Fin Operadores Where*/
         public ActionResult Login()
         {
+            Session["Comercio"] = null;
+            Session["NombreComercio"] = null;
             return View();
         }
 
@@ -35,7 +37,7 @@ namespace PuntoAfiliacionVentas.Controllers.Login
             {
                 
                 string select = "Select * from punto_afiliacion_comercios where correo_electronico = '" + txtEmail + "' and Contrasenna = '" + txtPassword + "' and ESTADO = '1' ";
-                DataTable Logueo = MYSQL_C.MYSQLSelect("BILLINGMYSQL_1", select);
+                DataTable Logueo = MYSQL_C.MYSQLSelect("BILLINGMYSQL", select);
                 if (Logueo.Rows.Count > 0)
                 {
                     Session["Comercio"] = Logueo.Rows[0]["ID"].ToString().Trim();

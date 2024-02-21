@@ -36,7 +36,14 @@
                         {
                             <form class="text-left">
                                 <div class="form">
+                                    @if (TempData["LoginError"] != null)
+                                    {
+                                        var loginMessage = TempData["LoginError"].ToString(); // Obtener el mensaje de TempData
+                                        var encodedMessage = HttpUtility.JavaScriptStringEncode(loginMessage); // Codificar el mensaje
 
+                                        <script src="~/Content/Disenno/plugins/sweetalerts/sweetalert2.min.js"></script>
+                                        <script>alert( "@Html.Raw(encodedMessage)");</script>
+                                    }
                                     <div id="username-field" class="field-wrapper input">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                         <input id="txtEmail" name="txtEmail" type="text" class="form-control" placeholder="Correo">
@@ -53,13 +60,13 @@
 
                                     <div class="text-center">
                                         <div class="field-wrapper">
-                                            <button type="submit" class="btn btn-primary" value="" >Ingresar</button>
+                                            <button type="submit" class="btn btn-primary" value="">Ingresar</button>
                                         </div>
 
                                     </div>
 
 
-                               
+
 
                                 </div>
                             </form>
